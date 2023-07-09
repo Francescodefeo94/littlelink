@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>vCard - Personal Portfolio</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon"/>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+<main>
+    <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+            <figure class="avatar-box">
+                <img src="{{ profile.profile_photo }}" alt="{{ profile.name }}" class="avatar-box" width="80"/>
+            </figure>
+            <div class="info-content">
+                <h1 class="name" title="{{ profile.name }}">{{ profile.name }}</h1>
+                <p class="title">{{ profile.role }}</p>
+            </div>
+            <button class="info_more-btn" data-sidebar-btn>
+                <span>Show Contacts</span>
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
+        </div>
+        <div class="sidebar-info_more">
+            <div class="separator"></div>
+            <ul class="contacts-list">
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Email</p>
+                        <a href="mailto:{{ profile.email }}" class="contact-link">{{ profile.email }}</a>
+                    </div>
+                </li>
+                {% if profile.phone %}
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Phone</p>
+                        <a href="tel:{{ profile.phone }}" class="contact-link">{{ profile.phone }}</a>
+                    </div>
+                </li>
+                {% endif %} {% if profile.address %}
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Indirizzo</p>
+                        <address>{{ profile.address }}</address>
+                    </div>
+                </li>
+                {% endif %}
+            </ul>
+            <div class="separator"></div>
+            <ul class="social-list">
+                {% if profile.instagram %}
+                <li class="social-item">
+                    <a href="{{ profile.instagram }}" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                {% endif %} {% if profile.facebook %}
+                <li class="social-item">
+                    <a href="{{ profile.facebook }}" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                {% endif %} {% if profile.twitter %}
+                <li class="social-item">
+                    <a href="{{ profile.twitter }}" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+                {% endif %} {% if profile.linkedin %}
+                <li class="social-item">
+                    <a href="{{ profile.linkedin }}" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+                {% endif %} {% if profile.tiktok %}
+                <li class="social-item">
+                    <a href="{{ profile.tiktok }}" class="social-link">
+                        <ion-icon name="logo-tiktok"></ion-icon>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </aside>
+    <div class="main-content">
+        <article class="about active" data-page="about">
+            <header>
+                <h2 class="h2 article-title">{{ profile.company_name }}</h2>
+            </header>
+            <section class="about-text">
+                <p>{{ profile.bio }}</p>
+            </section>
+            <section class="service">
+                <h3 class="h3 service-title">Info & Contatti</h3>
+                <ul class="service-list">
+                    <a href="{{ profile.vcard }}">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="../assets/images/icons/generic-phone.svg" alt="Phone" width="40"/>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Salva il mio contatto</h4>
+                                <p class="service-item-text">
+                                    Clicca per salvare le informazioni di contatto
+                                </p>
+                            </div>
+                        </li>
+                    </a>
+                    {% if profile.website %}
+                    <a href="{{ profile.website }}">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="../assets/images/icons/generic-website.svg" alt="Web development icon"
+                                     width="40"/>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Sito Web</h4>
+                                <p class="service-item-text">
+                                    Visita il sito!
+                                </p>
+                            </div>
+                        </li>
+                    </a>
+                    {% endif %} {% if profile.instagram %}
+                    <a href="{{ profile.instagram }}">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="../assets/images/icons/instagram.svg" alt="mobile app icon" width="40"/>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Instagram</h4>
+                                <p class="service-item-text">
+                                    Visita il mio profilo Instagram
+                                </p>
+                            </div>
+                        </li>
+                    </a>
+                    {% endif %} {% if profile.tiktok %}
+                    <a href="{{ profile.tiktok }}">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="../assets/images/icons/tiktok.svg" alt="camera icon" width="40"/>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">TikTok</h4>
+                                <p class="service-item-text">
+                                    Visita il mio profilo TikTok
+                                </p>
+                            </div>
+                        </li>
+                    </a>
+                    {% endif %}
+                </ul>
+            </section>
+        </article>
+    </div>
+</main>
+<!-- custom js link -->
+<script src="../assets/js/script.js"></script>
+
+<!--
+- ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>vCard - Personal Portfolio</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon"/>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+<main>
+    <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+            <figure class="avatar-box">
+                <img src="profile/foto.jpg" alt="Francesco De Feo" class="avatar-box" width="80"/>
+            </figure>
+            <div class="info-content">
+                <h1 class="name" title="Francesco De Feo">Francesco De Feo</h1>
+                <p class="title">Software Engineer</p>
+            </div>
+            <button class="info_more-btn" data-sidebar-btn>
+                <span>Show Contacts</span>
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
+        </div>
+        <div class="sidebar-info_more">
+            <div class="separator"></div>
+            <ul class="contacts-list">
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Email</p>
+                        <a href="mailto:francescodefeo@example.com" class="contact-link">francescodefeo@example.com</a>
+                    </div>
+                </li>
+                
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Phone</p>
+                        <a href="tel:+123456789" class="contact-link">+123456789</a>
+                    </div>
+                </li>
+                 
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-title">Indirizzo</p>
+                        <address>Via Turci 9D, Cesinali(AV)</address>
+                    </div>
+                </li>
+                
+            </ul>
+            <div class="separator"></div>
+            <ul class="social-list">
+                
+                <li class="social-item">
+                    <a href="https://www.instagram.com/francescodefeo" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                 
+                <li class="social-item">
+                    <a href="https://www.facebook.com/francescodefeo" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                 
+                <li class="social-item">
+                    <a href="https://www.twitter.com/francescodefeo" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+                 
+                <li class="social-item">
+                    <a href="https://www.linkedin.com/in/francescodefeo" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+                 
+                <li class="social-item">
+                    <a href="https://www.tiktok.com/@francescodefeo" class="social-link">
+                        <ion-icon name="logo-tiktok"></ion-icon>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </aside>
+    <div class="main-content">
+        <article class="about active" data-page="about">
+            <header>
+                <h2 class="h2 article-title">See My Contact</h2>
+            </header>
+            <section class="about-text">
+                <p>Biografia</p>
+            </section>
+            <section class="service">
+                <h3 class="h3 service-title">Info & Contatti</h3>
+                <ul class="service-list">
+                    <a href="contacts\Francesco_De_Feo.vcf">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="../assets/images/icons/generic-phone.svg" alt="Phone" width="40"/>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Salva il mio contatto</h4>
+                                <p class="service-item-text">
+                                    Clicca per salvare le informazioni di contatto
+                                </p>
+                            </div>
+                        </li>
+                    </a>
+                    
+                    <a href="https://www.ennedvstudio.com">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="../assets/images/icons/generic-website.svg" alt="Web development icon"
+                                     width="40"/>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Sito Web</h4>
+                                <p class="service-item-text">
+                                    Visita il sito!
+                                </p>
+                            </div>
+                        </li>
+                    </a>
+                     
+                    <a href="https://www.instagram.com/francescodefeo">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="../assets/images/icons/instagram.svg" alt="mobile app icon" width="40"/>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Instagram</h4>
+                                <p class="service-item-text">
+                                    Visita il mio profilo Instagram
+                                </p>
+                            </div>
+                        </li>
+                    </a>
+                     
+                    <a href="https://www.tiktok.com/@francescodefeo">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="../assets/images/icons/tiktok.svg" alt="camera icon" width="40"/>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">TikTok</h4>
+                                <p class="service-item-text">
+                                    Visita il mio profilo TikTok
+                                </p>
+                            </div>
+                        </li>
+                    </a>
+                    
+                </ul>
+            </section>
+        </article>
+    </div>
+</main>
+<!-- custom js link -->
+<script src="../assets/js/script.js"></script>
+
+<!--
+- ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

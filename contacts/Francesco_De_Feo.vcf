@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Francesco De Feo
+FN:Francesco De Feo
+ORG:See My Contact
+TITLE:Software Engineer
+PHOTO;VALUE=URL:profile/foto.jpg
+EMAIL;TYPE=INTERNET:francescodefeo@example.com
+URL;TYPE=WORK:https://www.ennedvstudio.com
+TEL;TYPE=CELL:+123456789
+ADR;TYPE=WORK,PREF:;;Via Turci 9D, Cesinali(AV);;;
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/francescodefeo
+X-SOCIALPROFILE;TYPE=facebook:https://www.facebook.com/francescodefeo
+X-SOCIALPROFILE;TYPE=twitter:https://www.twitter.com/francescodefeo
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/francescodefeo
+X-SOCIALPROFILE;TYPE=tiktok:https://www.tiktok.com/@francescodefeo
+END:VCARD
